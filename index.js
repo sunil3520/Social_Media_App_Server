@@ -12,7 +12,7 @@ app.use(express.json());
 app.use("/", RegsiterRoute);
 app.use("/", loginRouter);
 app.use("/", Post_Route);
-app.listen(process.env.port, async () => {
+app.listen(process.env.PORT, async () => {
   try {
     await con;
     console.log(`server is running on port ${process.env.PORT}`);
