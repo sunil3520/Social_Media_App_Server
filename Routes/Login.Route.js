@@ -14,8 +14,8 @@ loginRouter.post("/login", (req, res) => {
       try {
         if (result.length > 0) {
           const hashPassword = result[0].password;
-          const userid = result[0].UserId;
-
+          const userid = result[0].userId;
+            console.log(userid,'userId from login')
           await bcrypt.compare(password, hashPassword, function (err, result) {
             if (err) {
               res.send(err);

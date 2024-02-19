@@ -28,6 +28,7 @@ Post_Route.post(
   async (req, res) => {
    
     const { description, userId } = req.body;
+    console.log(userId,"userid")
    
     if (!req.file) {
       res.send("No File Provided");
